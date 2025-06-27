@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from openai import OpenAI
 
 
@@ -29,7 +29,14 @@ def ask(query):
 
 
 
-
+@app.route('/download')
+def download_file():
+    # путь к файлу на сервере
+    filepath = 'dist/client.exe'
+    return send_file(
+        filepath,
+        as_attachment=True,  # указывает, что файл должен скачиваться, а не отображаться
+    )
 
 
 @app.route('/compute', methods=['POST'])
