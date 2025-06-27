@@ -7,7 +7,8 @@ def compute():
     data = request.json  # Получить данные
     # Выполнить вычисления
     result = data['value'] * 2  # пример
+    
     return jsonify({'result': result})
 
 if __name__ == '__main__':
-    app.run(port=5000)
+    app.run(host="0.0.0.0",port=5000)
