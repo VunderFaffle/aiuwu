@@ -1,4 +1,4 @@
 # Игнорировать файл client.py
-client.py
+# client.py
 client.spec
 build/
