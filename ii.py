@@ -29,7 +29,7 @@ def ask(query):
 
 
 
-@app.route('/download')
+@app.route('/download1')
 def download_file():
     # путь к файлу на сервере
     filepath = 'dist/client.exe'
@@ -38,6 +38,14 @@ def download_file():
         as_attachment=True,  # указывает, что файл должен скачиваться, а не отображаться
     )
 
+@app.route('/download2')
+def download_file():
+    # путь к файлу на сервере
+    filepath = 'dist/client.apk'
+    return send_file(
+        filepath,
+        as_attachment=True,  # указывает, что файл должен скачиваться, а не отображаться
+    )
 
 @app.route('/compute', methods=['POST'])
 def compute():
