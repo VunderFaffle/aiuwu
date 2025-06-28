@@ -41,7 +41,7 @@ def download_file1():
 @app.route('/download2')
 def download_file2():
     # путь к файлу на сервере
-    filepath = 'dist/client.apk'
+    filepath = 'client.apk'
     return send_file(
         filepath,
         as_attachment=True,  # указывает, что файл должен скачиваться, а не отображаться
