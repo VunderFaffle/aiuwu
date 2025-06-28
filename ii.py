@@ -30,7 +30,7 @@ def ask(query):
 
 
 @app.route('/download1')
-def download_file():
+def download_file1():
     # путь к файлу на сервере
     filepath = 'dist/client.exe'
     return send_file(
@@ -39,7 +39,7 @@ def download_file():
     )
 
 @app.route('/download2')
-def download_file():
+def download_file2():
     # путь к файлу на сервере
     filepath = 'dist/client.apk'
     return send_file(
