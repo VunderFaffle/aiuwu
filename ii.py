@@ -50,13 +50,13 @@ def download_file2():
 @app.route('/compute', methods=['POST'])
 def compute():
     global ask, setkey
-    data = request.json  # Получить данные
-    # Выполнить вычисления
+    print("RAW DATA:", request.data)
+    print("JSON:", request.json)
+    data = request.json
     req = data['value']
-    
     if data['apikey'] != "":
         setClient(data["apikey"])
-        
+    
     result = ask(req)
     print(result)
     return jsonify({'result': result})

@@ -3,3 +3,5 @@ main.py
 aichat/
 client.spec
 buildozer.spec
+dist/
+client.apk
