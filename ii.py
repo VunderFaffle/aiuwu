@@ -1,5 +1,8 @@
 from flask import Flask, request, jsonify, send_file
 from openai import OpenAI
+import gigaam
+model = gigaam.load_model("ctc")
+transcription = model.transcribe("test.wav")
 
 
 app = Flask(__name__)
