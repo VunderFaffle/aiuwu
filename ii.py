@@ -3,7 +3,7 @@ from openai import OpenAI
 import gigaam
 model = gigaam.load_model("ctc")
 transcription = model.transcribe("test.wav")
-
+print(transcription)
 
 app = Flask(__name__)
 
